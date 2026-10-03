@@ -1,991 +1,1501 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<title>Xtion Jerry | Official Website</title>
 
-    <title>Xtion Jerry | Official Website</title>
+<style>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap"
-          rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <style>
-
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background:
-                linear-gradient(rgba(0,0,0,.90), rgba(0,0,0,.94)),
-                url("texture.jpg");
-
-            background-size: cover;
-            background-attachment: fixed;
-
-            color: white;
+/* =========================
+   BASIC SETTINGS
+========================= */
 
-            font-family: "Inter", sans-serif;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+body {
+    background: #050608;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        button {
-            font-family: inherit;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        .container {
-            width: 94%;
-            max-width: 1450px;
-            margin: auto;
-        }
+button {
+    cursor: pointer;
+}
 
-        /* =====================================================
-           NAVIGATION
-        ===================================================== */
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 999;
+/* =========================
+   HEADER
+========================= */
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.98),
-                    rgba(8,13,22,.94),
-                    rgba(0,0,0,.98)
-                );
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(3,5,8,0.96);
+
+    border-bottom: 1px solid #333;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-            border-bottom: 1px solid rgba(255,193,7,.35);
+    padding: 10px 25px;
+}
 
-            backdrop-filter: blur(15px);
-        }
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ffb900;
+    font-style: italic;
+}
 
-        .navbar {
-            min-height: 68px;
+.nav {
+    display: flex;
+    gap: 25px;
+}
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.nav a {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
-            gap: 25px;
-        }
+.nav a:hover {
+    color: #ffb900;
+}
 
-        .logo {
-            font-family: "Bebas Neue", sans-serif;
-            font-size: 38px;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-
-        .logo span {
-            color: #ffb900;
-            font-family: "Permanent Marker", cursive;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-
-            transition: .3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffbf00;
-        }
-
-        .nav-links .active {
-            color: #ffbf00;
-            border-bottom: 2px solid #ffbf00;
-            padding-bottom: 8px;
-        }
+.book {
+    background: #ffb900;
+    color: black;
 
-        .book-btn {
-            background: #ffb900;
-            color: #000;
+    padding: 12px 22px;
 
-            padding: 13px 25px;
+    border-radius: 30px;
 
-            border-radius: 30px;
+    font-weight: bold;
+}
 
-            font-weight: 800;
-            font-size: 13px;
 
-            transition: .3s;
-        }
+/* =========================
+   HERO
+========================= */
 
-        .book-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(255,185,0,.45);
-        }
+.hero {
+    min-height: 500px;
 
-        .mobile-menu {
-            display: none;
-            font-size: 25px;
-        }
+    position: relative;
 
-        /* =====================================================
-           HERO
-        ===================================================== */
+    overflow: hidden;
 
-        .hero {
-            min-height: 420px;
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            #ff7200 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 65% 30%,
+            #005cff 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            120deg,
+            #111,
+            #050608 60%,
+            #111
+        );
 
-            position: relative;
+    display: flex;
+    align-items: center;
+}
 
-            overflow: hidden;
+.hero::before {
+    content: "";
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,.10),
-                    rgba(0,0,0,.25),
-                    rgba(0,0,0,.78)
-                ),
-                url("hero.jpg");
+    position: absolute;
+    inset: 0;
 
-            background-size: cover;
-            background-position: center;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.025) 0,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px,
+            transparent 8px
+        );
+}
 
-            border-bottom: 1px solid rgba(255,255,255,.15);
-        }
+.hero-content {
+    width: 90%;
+    max-width: 1400px;
 
-        .hero::after {
-            content: "";
+    margin: auto;
 
-            position: absolute;
-            inset: 0;
+    position: relative;
+    z-index: 2;
 
-            background:
-                radial-gradient(
-                    circle at 15% 50%,
-                    rgba(255,150,0,.40),
-                    transparent 30%
-                ),
+    text-align: right;
+}
 
-                radial-gradient(
-                    circle at 65% 30%,
-                    rgba(0,130,255,.30),
-                    transparent 30%
-                );
+.small-title {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #ddd;
+}
 
-            pointer-events: none;
-        }
+.hero h1 {
+    font-size: clamp(60px, 11vw, 150px);
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
+    line-height: .8;
 
-            min-height: 420px;
+    margin: 20px 0;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
+    font-weight: 900;
 
-            text-align: left;
-        }
+    text-transform: uppercase;
+}
 
-        .welcome {
-            font-size: 13px;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
+.hero h1 span {
+    color: #ffb900;
+    font-style: italic;
+}
 
-        .hero-title {
-            font-family: "Bebas Neue", sans-serif;
+.hero-role {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
 
-            font-size: clamp(65px, 9vw, 125px);
+.quote {
+    margin-top: 20px;
 
-            line-height: .82;
+    color: #ddd;
 
-            letter-spacing: 2px;
-        }
+    font-size: 17px;
 
-        .hero-title span {
-            color: #ffb900;
-            font-family: "Permanent Marker", cursive;
-        }
+    font-style: italic;
 
-        .hero-role {
-            margin-top: 15px;
+    line-height: 1.5;
+}
 
-            font-weight: 700;
-            letter-spacing: 3px;
-            font-size: 13px;
-        }
+.hero-buttons {
+    margin-top: 25px;
 
-        .quote {
-            margin-top: 18px;
+    display: flex;
 
-            font-style: italic;
+    justify-content: flex-end;
 
-            font-size: 16px;
+    gap: 12px;
+}
 
-            max-width: 480px;
-        }
+.yellow-button {
+    background: #ffb900;
+    color: #000;
 
-        .hero-buttons {
-            margin-top: 22px;
+    border: none;
 
-            display: flex;
-            gap: 12px;
-        }
+    padding: 14px 25px;
 
-        .yellow-btn,
-        .outline-btn {
-            padding: 13px 22px;
+    border-radius: 30px;
 
-            border-radius: 30px;
+    font-weight: bold;
+}
 
-            font-weight: 800;
-            font-size: 13px;
+.dark-button {
+    background: transparent;
 
-            border: none;
+    color: white;
 
-            cursor: pointer;
+    border: 1px solid white;
 
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+    padding: 14px 25px;
 
-            transition: .3s;
-        }
+    border-radius: 30px;
 
-        .yellow-btn {
-            background: #ffb900;
-            color: #000;
-        }
+    font-weight: bold;
+}
 
-        .outline-btn {
-            background: transparent;
-            border: 1px solid white;
-            color: white;
-        }
 
-        .yellow-btn:hover,
-        .outline-btn:hover {
-            transform: translateY(-3px);
-        }
+/* =========================
+   SECTIONS
+========================= */
 
-        /* =====================================================
-           SECTION HEADINGS
-        ===================================================== */
+section {
+    padding: 50px 5%;
+}
 
-        .section {
-            padding: 28px 0;
-        }
+.section-title {
+    font-size: 42px;
 
-        .section-heading {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+    margin-bottom: 25px;
 
-            margin-bottom: 18px;
-        }
+    font-weight: 900;
 
-        .section-title {
-            font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+}
 
-            font-size: 38px;
-            letter-spacing: 1px;
-        }
+.section-title span {
+    color: #ffb900;
+}
 
-        .section-title span {
-            color: #ffb900;
-            font-family: "Permanent Marker", cursive;
-        }
 
-        .view-all {
-            color: #ffbf00;
-            font-size: 13px;
-            font-weight: 800;
-        }
+/* =========================
+   MUSIC
+========================= */
 
-        /* =====================================================
-           SONGS
-        ===================================================== */
+.music-grid {
+    display: grid;
 
-        .songs {
-            display: grid;
+    grid-template-columns:
+        repeat(5, 1fr);
 
-            grid-template-columns:
-                repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
 
-            gap: 18px;
-        }
+.song {
+    background: #10151b;
 
-        .song-card {
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(20,29,40,.96),
-                    rgba(4,7,11,.98)
-                );
+    border: 1px solid #30353b;
 
-            border: 1px solid rgba(255,255,255,.17);
+    border-radius: 12px;
 
-            border-radius: 9px;
+    overflow: hidden;
 
-            overflow: hidden;
+    transition: .3s;
+}
 
-            box-shadow:
-                0 10px 25px rgba(0,0,0,.4);
+.song:hover {
+    transform: translateY(-7px);
 
-            transition: .35s;
-        }
+    border-color: #ffb900;
+}
 
-        .song-card:hover {
-            transform: translateY(-7px);
+.cover {
+    height: 220px;
 
-            border-color: #ffb900;
+    display: flex;
 
-            box-shadow:
-                0 15px 35px rgba(255,185,0,.18);
-        }
+    align-items: center;
+    justify-content: center;
 
-        .song-cover {
-            aspect-ratio: 1/1;
+    text-align: center;
 
-            overflow: hidden;
+    padding: 20px;
 
-            position: relative;
-        }
+    font-size: 28px;
 
-        .song-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    font-weight: 900;
 
-            transition: .4s;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #ff7200,
+            #111 45%,
+            #005cff
+        );
+}
 
-        .song-card:hover .song-cover img {
-            transform: scale(1.07);
-        }
+.cover.two {
+    background:
+        linear-gradient(
+            135deg,
+            #7900ff,
+            #111,
+            #00aaff
+        );
+}
 
-        .song-info {
-            padding: 12px;
-        }
+.cover.three {
+    background:
+        linear-gradient(
+            135deg,
+            #00a86b,
+            #111,
+            #ffb900
+        );
+}
 
-        .song-name {
-            font-size: 16px;
-            font-weight: 800;
-        }
+.cover.four {
+    background:
+        linear-gradient(
+            135deg,
+            #ff003c,
+            #111,
+            #ffb900
+        );
+}
 
-        .genre {
-            color: #aaa;
-            font-size: 12px;
-            margin-top: 4px;
-        }
+.cover.five {
+    background:
+        linear-gradient(
+            135deg,
+            #004cff,
+            #111,
+            #7900ff
+        );
+}
 
-        .rating {
-            margin-top: 9px;
+.song-info {
+    padding: 15px;
+}
 
-            color: #ffc400;
+.song-name {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-            font-size: 13px;
-        }
+.genre {
+    color: #999;
+    font-size: 13px;
+    margin-top: 5px;
+}
 
-        .rating span {
-            color: #aaa;
-            margin-left: 5px;
-        }
+.stars {
+    color: #ffb900;
+    margin-top: 10px;
+}
 
-        .song-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+.buttons {
+    display: grid;
 
-            gap: 7px;
+    grid-template-columns: 1fr 1fr;
 
-            margin-top: 11px;
-        }
+    gap: 8px;
 
-        .play-btn,
-        .download-btn {
-            border: none;
+    margin-top: 12px;
+}
 
-            border-radius: 20px;
+.play {
+    border: none;
 
-            padding: 9px 7px;
+    background: #ffb900;
 
-            font-size: 11px;
+    color: #000;
 
-            font-weight: 800;
+    padding: 9px;
 
-            cursor: pointer;
-        }
+    border-radius: 20px;
 
-        .play-btn {
-            background: #ffb900;
-            color: #000;
-        }
+    font-weight: bold;
+}
 
-        .download-btn {
-            background: #087ef5;
-            color: white;
-        }
+.download {
+    background: #087df5;
 
-        /* =====================================================
-           BIOGRAPHY
-        ===================================================== */
+    color: white;
 
-        .bio-area {
-            display: grid;
+    padding: 9px;
 
-            grid-template-columns:
-                1.3fr .9fr .8fr;
+    border-radius: 20px;
 
-            gap: 20px;
+    text-align: center;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(20,25,27,.92),
-                    rgba(5,8,12,.96)
-                );
+    font-size: 12px;
 
-            border-top: 1px solid rgba(255,255,255,.12);
-            border-bottom: 1px solid rgba(255,255,255,.12);
+    font-weight: bold;
+}
 
-            padding: 25px;
-        }
 
-        .bio-text h2 {
-            font-family: "Permanent Marker", cursive;
+/* =========================
+   BIOGRAPHY
+========================= */
 
-            font-size: 37px;
+.bio {
+    display: grid;
 
-            margin-bottom: 12px;
-        }
+    grid-template-columns:
+        1.4fr 1fr 1fr;
 
-        .bio-text h2 span {
-            color: #ffb900;
-        }
+    gap: 25px;
 
-        .bio-text p {
-            color: #ddd;
+    background:
+        linear-gradient(
+            135deg,
+            #111820,
+            #07090b
+        );
 
-            line-height: 1.7;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 
-            font-size: 14px;
+    padding: 35px;
+}
 
-            margin-bottom: 14px;
-        }
+.bio h2 {
+    font-size: 42px;
 
-        .bio-photo {
-            min-height: 330px;
+    margin-bottom: 20px;
+}
 
-            background-image: url("artist.jpg");
+.bio h2 span {
+    color: #ffb900;
+}
 
-            background-size: cover;
-            background-position: center;
+.bio p {
+    color: #ccc;
 
-            border-radius: 7px;
+    line-height: 1.7;
 
-            box-shadow: inset 0 0 80px rgba(0,0,0,.5);
-        }
+    margin-bottom: 15px;
+}
 
-        /* =====================================================
-           QUICK FACTS
-        ===================================================== */
+.artist-image {
+    min-height: 350px;
 
-        .facts h3,
-        .contact h3 {
-            color: #ffb900;
+    border-radius: 10px;
 
-            font-family: "Permanent Marker", cursive;
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #1674ff,
+            transparent 30%
+        ),
+        linear-gradient(
+            145deg,
+            #ff7200,
+            #111 50%,
+            #004cff
+        );
 
-            font-size: 20px;
+    display: flex;
 
-            margin-bottom: 10px;
-        }
+    align-items: center;
 
-        .fact {
-            display: flex;
-            justify-content: space-between;
+    justify-content: center;
 
-            padding: 9px 0;
+    text-align: center;
 
-            border-bottom: 1px solid rgba(255,255,255,.12);
+    font-size: 35px;
 
-            font-size: 12px;
-        }
+    font-weight: 900;
+}
 
-        .fact span:first-child {
-            color: #aaa;
-        }
+.facts h3,
+.contact h3 {
+    color: #ffb900;
 
-        .contact {
-            margin-top: 22px;
-        }
+    font-size: 21px;
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+    margin-bottom: 15px;
+}
 
-            font-size: 12px;
+.fact {
+    display: flex;
 
-            margin: 12px 0;
-        }
+    justify-content: space-between;
 
-        .contact-item i {
-            color: #ffb900;
+    gap: 10px;
 
-            width: 18px;
-        }
+    padding: 12px 0;
 
-        .whatsapp {
-            background: #10c66b;
+    border-bottom: 1px solid #292929;
 
-            padding: 8px 13px;
+    font-size: 13px;
+}
 
-            border-radius: 20px;
+.fact span {
+    color: #999;
+}
 
-            font-size: 11px;
 
-            font-weight: 800;
+/* =========================
+   CONTACT
+========================= */
 
-            display: inline-block;
+.contact {
+    margin-top: 30px;
+}
 
-            margin-top: 3px;
-        }
+.contact p {
+    margin: 10px 0;
 
-        /* =====================================================
-           SOCIAL
-        ===================================================== */
+    color: #ccc;
+}
 
-        .socials {
-            display: flex;
-            gap: 9px;
+.whatsapp {
+    display: inline-block;
 
-            margin-top: 15px;
-        }
+    background: #12c76b;
 
-        .social {
-            width: 35px;
-            height: 35px;
+    color: white;
 
-            border-radius: 50%;
+    padding: 10px 15px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    border-radius: 25px;
 
-            background: #111;
+    margin-top: 10px;
 
-            border: 1px solid rgba(255,255,255,.2);
+    font-weight: bold;
+}
 
-            transition: .3s;
-        }
 
-        .social:hover {
-            transform: translateY(-4px);
-            background: #ffb900;
-            color: #000;
-        }
+/* =========================
+   LOWER CONTENT
+========================= */
 
-        /* =====================================================
-           LOWER GRID
-        ===================================================== */
+.lower {
+    display: grid;
 
-        .lower-grid {
-            display: grid;
+    grid-template-columns:
+        1fr 1fr 1fr;
 
-            grid-template-columns:
-                1.1fr 1fr .8fr;
+    gap: 20px;
+}
 
-            gap: 18px;
-        }
+.box {
+    background: #0c1014;
 
-        .panel {
-            background: rgba(5,9,14,.90);
+    border: 1px solid #292d32;
 
-            border: 1px solid rgba(255,255,255,.13);
+    border-radius: 10px;
 
-            border-radius: 7px;
+    overflow: hidden;
+}
 
-            overflow: hidden;
-        }
+.box h3 {
+    padding: 18px;
 
-        .panel-title {
-            padding: 13px 15px;
+    color: #ffb900;
 
-            color: #ffb900;
+    font-size: 21px;
+}
 
-            font-family: "Permanent Marker", cursive;
+.video {
+    height: 220px;
 
-            font-size: 18px;
-        }
+    background:
+        radial-gradient(
+            circle,
+            #155dff,
+            #111 55%,
+            #000
+        );
 
-        .video {
-            position: relative;
-        }
+    display: flex;
 
-        .video img {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-        }
+    align-items: center;
 
-        .video-play {
-            position: absolute;
+    justify-content: center;
+}
 
-            top: 50%;
-            left: 50%;
+.video-button {
+    width: 65px;
+    height: 65px;
 
-            transform: translate(-50%,-50%);
+    border-radius: 50%;
 
-            width: 58px;
-            height: 58px;
+    background: #ffb900;
 
-            border-radius: 50%;
+    color: black;
 
-            background: rgba(0,0,0,.7);
+    display: flex;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    align-items: center;
 
-            font-size: 21px;
-        }
+    justify-content: center;
 
-        .video-info {
-            padding: 12px;
+    font-size: 25px;
+}
 
-            font-size: 12px;
-        }
+.gallery {
+    display: grid;
 
-        .gallery {
-            display: grid;
+    grid-template-columns:
+        1fr 1fr;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    gap: 7px;
 
-            gap: 7px;
+    padding: 15px;
+}
 
-            padding: 0 12px 12px;
-        }
+.photo {
+    height: 110px;
 
-        .gallery img {
-            aspect-ratio: 1/1;
+    display: flex;
 
-            width: 100%;
+    align-items: center;
 
-            object-fit: cover;
+    justify-content: center;
 
-            border-radius: 5px;
-        }
+    font-weight: bold;
 
-        .news {
-            padding: 0 15px 15px;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #ff7200,
+            #111,
+            #005cff
+        );
 
-        .news-box {
-            border: 1px solid rgba(255,255,255,.15);
+    border-radius: 5px;
+}
 
-            padding: 15px;
+.news-content {
+    padding: 15px;
 
-            border-radius: 7px;
+    color: #ccc;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    rgba(255,185,0,.08),
-                    rgba(0,0,0,.3)
-                );
-        }
+    line-height: 1.6;
+}
 
-        .news-box h4 {
-            margin-bottom: 9px;
-        }
 
-        .news-box p {
-            color: #bbb;
-            font-size: 13px;
-            line-height: 1.5;
-        }
+/* =========================
+   FAN CLUB
+========================= */
 
-        /* =====================================================
-           FAN CLUB
-        ===================================================== */
+.fan {
+    margin: 0 5% 40px;
 
-        .fan-club {
-            margin-top: 18px;
+    padding: 25px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #111,
-                    #080b0e
-                );
+    background:
+        linear-gradient(
+            90deg,
+            #131313,
+            #080808
+        );
 
-            border-top: 1px solid rgba(255,185,0,.35);
-            border-bottom: 1px solid rgba(255,185,0,.35);
+    border-top: 1px solid #ffb900;
 
-            padding: 18px;
+    border-bottom: 1px solid #ffb900;
 
-            display: flex;
+    display: flex;
 
-            align-items: center;
+    align-items: center;
 
-            gap: 20px;
-        }
+    gap: 20px;
+}
 
-        .mail-icon {
-            width: 55px;
-            height: 55px;
+.fan h3 {
+    color: #ffb900;
 
-            border-radius: 50%;
+    font-size: 22px;
+}
 
-            background: #ffb900;
+.fan p {
+    color: #aaa;
 
-            color: #000;
+    margin-top: 5px;
+}
 
-            display: flex;
+.fan form {
+    margin-left: auto;
 
-            justify-content: center;
-            align-items: center;
+    display: flex;
+}
 
-            font-size: 22px;
-        }
+.fan input {
+    padding: 13px 18px;
 
-        .fan-text {
-            min-width: 190px;
-        }
+    background: #111;
 
-        .fan-text h3 {
-            color: #ffb900;
+    border: 1px solid #333;
 
-            font-family: "Permanent Marker", cursive;
-        }
+    color: white;
 
-        .fan-text p {
-            color: #aaa;
-            font-size: 11px;
-            margin-top: 4px;
-        }
+    outline: none;
 
-        .subscribe {
-            display: flex;
+    border-radius: 25px 0 0 25px;
+}
 
-            flex: 1;
+.fan button {
+    padding: 13px 20px;
 
-            max-width: 500px;
+    background: #ffb900;
 
-            margin-left: auto;
-        }
+    border: none;
 
-        .subscribe input {
-            flex: 1;
+    font-weight: bold;
 
-            padding: 12px 15px;
+    border-radius: 0 25px 25px 0;
+}
 
-            border: 1px solid #333;
 
-            background: #080808;
+/* =========================
+   SOCIAL
+========================= */
 
-            color: white;
+.social {
+    display: flex;
 
-            border-radius: 25px 0 0 25px;
+    gap: 10px;
 
-            outline: none;
-        }
+    margin-top: 15px;
+}
 
-        .subscribe button {
-            border: none;
+.social a {
+    width: 38px;
+    height: 38px;
 
-            background: #ffb900;
+    border-radius: 50%;
 
-            color: #000;
+    background: #15191d;
 
-            padding: 0 25px;
+    display: flex;
 
-            border-radius: 0 25px 25px 0;
+    align-items: center;
 
-            font-weight: 800;
+    justify-content: center;
 
-            cursor: pointer;
-        }
+    border: 1px solid #333;
+}
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+.social a:hover {
+    background: #ffb900;
+    color: black;
+}
 
-        footer {
-            padding: 25px 0;
 
-            background: #030506;
+/* =========================
+   FOOTER
+========================= */
 
-            border-top: 1px solid rgba(255,255,255,.12);
-        }
+footer {
+    background: #020304;
 
-        .footer-inner {
-            display: flex;
+    border-top: 1px solid #292929;
 
-            align-items: center;
-            justify-content: space-between;
+    padding: 30px 5%;
+}
 
-            gap: 20px;
-        }
+.footer {
+    max-width: 1400px;
 
-        .footer-logo {
-            font-family: "Bebas Neue", sans-serif;
+    margin: auto;
 
-            font-size: 30px;
-        }
+    display: flex;
 
-        .footer-logo span {
-            color: #ffb900;
-            font-family: "Permanent Marker", cursive;
-        }
+    align-items: center;
 
-        .footer-links {
-            display: flex;
+    justify-content: space-between;
 
-            gap: 15px;
+    gap: 20px;
+}
 
-            color: #aaa;
+.footer-logo {
+    font-size: 28px;
 
-            font-size: 11px;
-        }
+    font-weight: 900;
+}
 
-        .copyright {
-            color: #777;
+.footer-logo span {
+    color: #ffb900;
+}
 
-            font-size: 11px;
-        }
+.footer-links {
+    display: flex;
 
-        /* =====================================================
-           MUSIC PLAYER
-        ===================================================== */
+    gap: 18px;
 
-        .music-player {
-            position: fixed;
+    font-size: 12px;
 
-            bottom: 0;
-            left: 0;
-            right: 0;
+    color: #aaa;
+}
 
-            z-index: 1000;
+.copyright {
+    color: #777;
 
-            background:
-                rgba(5,7,10,.97);
+    font-size: 12px;
+}
 
-            border-top: 1px solid #ffb900;
 
-            padding: 10px 18px;
+/* =========================
+   AUDIO PLAYER
+========================= */
 
-            display: none;
+.player {
+    position: fixed;
 
-            align-items: center;
+    bottom: 0;
 
-            gap: 15px;
-        }
+    left: 0;
+    right: 0;
 
-        .music-player.active {
-            display: flex;
-        }
+    background: rgba(0,0,0,.96);
 
-        .player-info {
-            flex: 1;
-        }
+    border-top: 2px solid #ffb900;
 
-        .player-info strong {
-            display: block;
-            font-size: 13px;
-        }
+    padding: 12px 20px;
 
-        .player-info span {
-            color: #888;
-            font-size: 10px;
-        }
+    display: none;
 
-        audio {
-            width: 350px;
-            height: 35px;
-        }
+    align-items: center;
 
-        .close-player {
-            cursor: pointer;
-            color: #aaa;
-        }
+    gap: 20px;
 
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
+    z-index: 2000;
+}
 
-        @media(max-width:1100px) {
+.player.active {
+    display: flex;
+}
 
-            .songs {
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
+.player-title {
+    font-weight: bold;
 
-            .bio-area {
-                grid-template-columns:
-                    1fr 1fr;
-            }
+    min-width: 150px;
+}
 
-            .facts {
-                grid-column: span 2;
-            }
+.player audio {
+    flex: 1;
+}
 
-            .lower-grid {
-                grid-template-columns:
-                    1fr 1fr;
-            }
 
-        }
+/* =========================
+   MOBILE
+========================= */
 
-        @media(max-width:750px) {
+@media(max-width:1000px) {
 
-            .nav-links,
-            header .book-btn {
-                display: none;
-            }
+    .music-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
 
-            .mobile-menu {
-                display: block;
-            }
+    .bio {
+        grid-template-columns:
+            1fr 1fr;
+    }
 
-            .hero-content {
-                align-items: center;
-             
+    .lower {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .nav {
+        display: none;
+    }
+
+    .book {
+        display: none;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .music-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .bio {
+        grid-template-columns:
+            1fr;
+
+        padding: 20px;
+    }
+
+    .lower {
+        grid-template-columns:
+            1fr;
+    }
+
+    .fan {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .fan form {
+        margin-left: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:450px) {
+
+    .music-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .fan form {
+        width: 100%;
+    }
+
+    .fan input {
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="navbar">
+
+    <a href="#home" class="logo">
+        XTION <span>JERRY</span>
+    </a>
+
+    <nav class="nav">
+
+        <a href="#home">Home</a>
+
+        <a href="#music">Music</a>
+
+        <a href="#videos">Videos</a>
+
+        <a href="#bio">Biography</a>
+
+        <a href="#gallery">Gallery</a>
+
+        <a href="#news">News</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+    <a href="#contact" class="book">
+        BOOK NOW
+    </a>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+    <div class="small-title">
+        WELCOME TO THE OFFICIAL WEBSITE OF
+    </div>
+
+    <h1>
+        XTION <span>JERRY</span>
+    </h1>
+
+    <div class="hero-role">
+        ARTIST &nbsp; • &nbsp;
+        SONGWRITER &nbsp; • &nbsp;
+        PRODUCER
+    </div>
+
+    <div class="quote">
+        "Music is not just sound,<br>
+        it's a message from the heart."
+    </div>
+
+    <div class="hero-buttons">
+
+        <a href="#music"
+           class="yellow-button">
+
+            ▶ PLAY ALL SONGS
+
+        </a>
+
+        <a href="#music"
+           class="dark-button">
+
+            ↓ DOWNLOAD MUSIC
+
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<section id="music">
+
+<div class="section-title">
+    <span>FEATURED</span> SONGS
+</div>
+
+
+<div class="music-grid">
+
+
+<!-- SONG 1 -->
+
+<div class="song">
+
+    <div class="cover">
+        BIG<br>BOOTY
+    </div>
+
+    <div class="song-info">
+
+        <div class="song-name">
+            Big Booty
+        </div>
+
+        <div class="genre">
+            Dancehall
+        </div>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="play"
+                onclick="playSong('Big Booty','songs/big-booty.mp3')">
+
+                ▶ Play
+
+            </button>
+
+            <a
+                class="download"
+                href="songs/big-booty.mp3"
+                download>
+
+                ↓ Download
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SONG 2 -->
+
+<div class="song">
+
+    <div class="cover two">
+        MY<br>OWN
+    </div>
+
+    <div class="song-info">
+
+        <div class="song-name">
+            My Own
+        </div>
+
+        <div class="genre">
+            Afrobeat
+        </div>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="play"
+                onclick="playSong('My Own','songs/my-own.mp3')">
+
+                ▶ Play
+
+            </button>
+
+            <a
+                class="download"
+                href="songs/my-own.mp3"
+                download>
+
+                ↓ Download
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SONG 3 -->
+
+<div class="song">
+
+    <div class="cover three">
+        BE<br>SOMEBODY
+    </div>
+
+    <div class="song-info">
+
+        <div class="song-name">
+            Be Somebody
+        </div>
+
+        <div class="genre">
+            Afro Pop
+        </div>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="play"
+                onclick="playSong('Be Somebody','songs/be-somebody.mp3')">
+
+                ▶ Play
+
+            </button>
+
+            <a
+                class="download"
+                href="songs/be-somebody.mp3"
+                download>
+
+                ↓ Download
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SONG 4 -->
+
+<div class="song">
+
+    <div class="cover four">
+        CITY<br>VIBES
+    </div>
+
+    <div class="song-info">
+
+        <div class="song-name">
+            City Vibes
+        </div>
+
+        <div class="genre">
+            Reggae / Dancehall
+        </div>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="play"
+                onclick="playSong('City Vibes','songs/city-vibes.mp3')">
+
+                ▶ Play
+
+            </button>
+
+            <a
+                class="download"
+                href="songs/city-vibes.mp3"
+                download>
+
+                ↓ Download
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SONG 5 -->
+
+<div class="song">
+
+    <div class="cover five">
+        STORY<br>OF LIFE
+    </div>
+
+    <div class="song-info">
+
+        <div class="song-name">
+            Story Of Life
+        </div>
+
+        <div class="genre">
+            R&B / Afrobeat
+        </div>
+
+        <div class="stars">
+            ★★★★★
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="play"
+                onclick="playSong('Story Of Life','songs/story-of-life.mp3')">
+
+                ▶ Play
+
+            </button>
+
+            <a
+                class="download"
+                href="songs/story-of-life.mp3"
+                download>
+
+                ↓ Download
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BIOGRAPHY
+========================= -->
+
+<section id="bio">
+
+<div class="bio">
+
+
+<div>
+
+    <h2>
+        <span>ABOUT THE</span>
+        ARTIST
+    </h2>
+
+    <p>
+        Xtion Jerry is an artist, songwriter,
+        producer and sound engineer bringing
+        his own sound, energy and creativity
+        into African music.
+    </p>
+
+    <p>
+        His music combines modern African
+        sounds with dancehall, Afrobeat,
+        reggae and other influences.
+    </p>
+
+    <p>
+        His goal is simple: create music that
+        people can feel, remember and connect
+        with.
+    </p>
+
+    <a href="#contact"
+       class="yellow-button">
+
+        CONTACT XT​​ION JERRY
+
+    </a>
+
+</div>
+
+
+<div class="artist-image">
+
+    XTION<br>JERRY
+
+</div>
+
+
+<div>
+
+    <div class="facts">
+
+        <h3>
+            QUICK FACTS
+        </h3>
+
+        <div class="fact">
+            <span>Artist</span>
+            <strong>Xtion Jerry</strong>
+        </div>
+
+        <div class="fact">
+            <span>Profession</span>
+            <strong>Artist / Producer</strong>
+        </div>
+
+        <div class="fact">
+            <span>Genre</span>
+            <strong>Afrobeat / Dancehall</strong>
+        </div>
+
+        <div class="fact">
+            <span>Location</span>
+            <strong>South Sudan</strong>
+        </div>
+
+        <div class="fact">
+            <span>Studio</span>
+            <strong>City Vibes Record</strong>
+        </div>
+
+    </div>
+
+
+    <div class="contact" id="contact">
+
+        <h3>
+            CONTACT & BOOKING
+        </h3>
+
+        <p>
+            📞 YOUR PHONE NUMBER
+        </p>
+
+        <p>
+            📧 YOUR EMAIL
+        </p>
+
+        <a
+            href="https://wa.me/211000000000"
+            class="whatsapp">
+
+            WhatsApp Me
+
+        </a>
+
+
+        <div class="social">
+
+            <a href="#">
+                f
+            </a>
+
+            <a href="#">
+                ▶
+            </a>
+
+            <a href="#">
+                ◎
+            </a>
+
+            <a href="#">
+                ♪
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VIDEOS / GALLERY / NEWS
+========================= -->
+
+<section>
+
+<div class="lower">
+
+
+<div class="box" id="videos">
+
+    <h3>
+        LATEST VIDEO
+    </h3>
+
+    <div class="video">
+
+        <a
+            href="#"
+            class="video-but
