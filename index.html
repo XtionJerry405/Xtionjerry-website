@@ -1,276 +1,991 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Xtion Jerry Official | Music, Videos & Photos</title>
-  <meta name="description" content="Official website of Xtion Jerry — discover my music, latest songs, videos, photos and more.">
-  <meta name="google-site-verification" content="EyRz2D6ITarCmsS0Sv_1jw3f9tgNS9Z6AP5kxyJMh9w" />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="nav">
-<img src="xtion-jerry-2.png"
-     alt="Xtion Jerry"
-     style="
-       width: 120px;
-       height: 120px;
-       object-fit: cover;
-       opacity: 1;
-       display: block;
-       margin: 0 auto 10px;
-       border-radius: 50%;
-     ">
-</div>
-    <a class="logo" href="#home">XTION <span>JERRY</span></a>
-    <button class="menu" aria-label="Open menu">☰</button>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#music">Music</a>
-      <a href="#videos">Videos</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <meta charset="UTF-8">
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-image"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">OFFICIAL WEBSITE</p>
-        <h1>XTION<br><span>JERRY</span></h1>
-        <p class="intro">Music • Culture • Creativity</p>
-        <div class="buttons">
-          <a class="btn primary" href="#music">Listen to My Music</a>
-          <a class="btn secondary" href="#videos">Watch Videos</a>
-        </div>
-      </div>
-    </section>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <body>
+    <title>Xtion Jerry | Official Website</title>
 
-    <h1>Xtion Jerry</h1>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Your profile image -->
-    <img src="your-image.jpg"
-         alt="Xtion Jerry"
-         style="
-           width: 120px;
-           height: 120px;
-           object-fit: cover;
-           opacity: 1;
-           display: block;
-           margin: 0 auto 10px;
-           border-radius: 50%;
-         ">
-    <section id="latest-release">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Permanent+Marker&display=swap"
+          rel="stylesheet">
 
-        <h2>Latest Release</h2>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <h3>Xtion Jerry — BE SOMEBODY</h3>
+    <style>
 
-        <audio controls>
-            <source src="be-somebody.mp3" type="audio/mpeg">
-            Your browser does not support the audio player.
-        </audio>
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
 
-        <br><br>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <a href="be-somebody.mp3" download>
-            ⬇️ Download
-        </a>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    </section>
-          <h3>Your Beauty</h3>
-          <p>Xtion Jerry — Your Beauty</p>
-          <a href="https://audiomack.com/Xtion/song/xtion-jerry-your-beauty?share-user-id=51915764" class="text-link">Listen →</a>
-          <h3>Back in the Day</h3>
-          <p>Xtion Jerry — Back in the Day</p>
-          <a href="https://amazon.com/music/player/tracks/B0GSCMHCWP?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_ipnalIwq3BfvrabVCvU3ITJy5" class="text-link">Listen →</a>        </article>
-          <h3>Big Booty</h3>
-          <p>Xtion Jerry — Big Booty</p>
-          <a href="https://music.amazon.in/tracks/B0GJMJ6JSX?marketplaceId=A21TJRUUN4KGV&musicTerritory=IN&ref=dm_sh_NifLz2zBgw33C0ENSTzbHSSki" class="text-link">Listen →</a>        <article class="card">
-  <div class="cover">🎧</div>
-  <h3>My Music</h3>
-  <p>Listen on your favorite platforms.</p>
+        body {
+            background:
+                linear-gradient(rgba(0,0,0,.90), rgba(0,0,0,.94)),
+                url("texture.jpg");
 
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
-    <a href="https://www.youtube.com/results?search_query=Xtion+Jerry" target="_blank" rel="noopener" class="text-link">YouTube</a>
-    <a href="https://audiomack.com/Xtion" target="_blank" rel="noopener" class="text-link">Audiomack</a>
-    <a href="https://open.spotify.com/search/Xtion%20Jerry" target="_blank" rel="noopener" class="text-link">Spotify</a>
-    <a href="https://music.apple.com/us/search?term=Xtion%20Jerry" target="_blank" rel="noopener" class="text-link">Apple Music</a>
-    <a href="https://xtionjerry405.github.io/Xtionjerry-website/" target="_blank" rel="noopener" class="text-link">Official Website</a>
-  </div>
-</article>
-        </article>
-        <article class="card">
-          <div class="cover">🎙️</div>
-          <h3>Collaborations</h3>
-          <p>Showcase songs made with other artists.</p>
-          <a href="#" class="text-link">View →</a>
-        </article>
-      </div>
-    </section>
+            background-size: cover;
+            background-attachment: fixed;
 
-    <section id="videos" class="section alt">
-      <p class="eyebrow">WATCH</p>
-      <h2>Videos</h2>
-      <p class="section-text">Music videos, performances and behind-the-scenes moments.</p>
-      <div class="video-grid">
-        <div class="video-card"><div class="play">▶</div><h3>Music Video</h3><p>Replace with your YouTube video.</p></div>
-        <div class="video-card"><div class="play">▶</div><h3>Live Performance</h3><p>Replace with your performance video.</p></div>
-      </div>
-    </section>
+            color: white;
 
-    <section id="gallery" class="section">
-      <p class="eyebrow">VISUALS</p>
-      <h2>Gallery</h2>
-      <p class="section-text">Photos from the studio, performances, projects and everyday moments.</p>
-      <div class="gallery-grid">
-        <img src="images/xtion-jerry-hero.jpg" alt="Xtion Jerry portrait">
-        <img src="images/xtion-jerry-2.png" alt="Xtion Jerry">
-        <div class="gallery-placeholder">Add Photo 3</div>
-        <div class="gallery-placeholder">Add Photo 4</div>
-      </div>
-    </section>
+            font-family: "Inter", sans-serif;
+        }
 
-    <section id="about" class="section alt about">
-      <div>
-        <p class="eyebrow">THE ARTIST</p>
-        <h2>About Xtion Jerry</h2>
-        <p>Welcome to the official home of Xtion Jerry. This is where you can share your story, your sound, your creative journey and everything behind the music.</p>
-        <!-- ABOUT XTION JERRY -->
-<section>
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-  <p>
-    About <span style="color: #1877F2; font-weight: 700;">Xtion Jerry</span>
-  </p>
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-  <p>
-    Xtion Jerry is a South Sudanese music producer, sound engineer,
-    musician, and video editor driven by a passion for sound, creativity,
-    and visual storytelling.
-  </p>
+        button {
+            font-family: inherit;
+        }
 
-  <p>
-    From producing beats and engineering records to creating music and
-    visual content, Xtion Jerry brings together music, technology, and
-    creativity to turn ideas into powerful experiences.
-  </p>
+        .container {
+            width: 94%;
+            max-width: 1450px;
+            margin: auto;
+        }
 
-  <p>
-    His work is built around one goal: creating authentic sounds and
-    visuals that connect with people.
-  </p>
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
-  <p>
-    Based in South Sudan and connected to the growing African creative scene,
-    Xtion Jerry continues to produce, collaborate, and push his creativity
-    beyond boundaries.
-  </p>
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
 
-  <p><strong>Work With Xtion Jerry</strong></p>
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.98),
+                    rgba(8,13,22,.94),
+                    rgba(0,0,0,.98)
+                );
 
-  <p>
-    Have a song, project, or creative idea you want to bring to life?
-  </p>
+            border-bottom: 1px solid rgba(255,193,7,.35);
 
-  <p>
-    Whether you need music production, professional sound engineering,
-    beat production, or video editing, Xtion Jerry is available for
-    creative collaborations and commissioned projects.
-  </p>
+            backdrop-filter: blur(15px);
+        }
 
-  <!-- CONTACT CTA -->
-  <div style="
-    text-align: center;
-    margin: 25px 0;
-    padding: 20px;
-    border-radius: 12px;
-    background: #f5f7fa;
-  ">
+        .navbar {
+            min-height: 68px;
 
-    <p style="margin: 0 0 8px; font-size: 18px; font-weight: 700;">
-      Ready to create something powerful?
-    </p>
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-    <p style="margin: 0 0 18px; color: #555;">
-      Let's work together on your next project.
-    </p>
+            gap: 25px;
+        }
 
-    <!-- CALL -->
-    <a href="tel:+211920059945"
-       style="
-       display: block;
-       width: 100%;
-       max-width: 320px;
-       margin: 0 auto 12px;
-       padding: 14px 20px;
-       background: #1877F2;
-       color: white;
-       text-decoration: none;
-       font-weight: 700;
-       font-size: 16px;
-       border-radius: 8px;
-       box-sizing: border-box;">
-      📞 Call Xtion Jerry
-    </a>
+        .logo {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 38px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
 
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/211920059945"
-       target="_blank"
-       rel="noopener"
-       style="
-       display: block;
-       width: 100%;
-       max-width: 320px;
-       margin: 0 auto 14px;
-       padding: 14px 20px;
-       background: #25D366;
-       color: white;
-       text-decoration: none;
-       font-weight: 700;
-       font-size: 16px;
-       border-radius: 8px;
-       box-sizing: border-box;">
-      💬 WhatsApp Xtion Jerry
-    </a>
+        .logo span {
+            color: #ffb900;
+            font-family: "Permanent Marker", cursive;
+        }
 
-    <p style="margin: 0; font-size: 15px;">
-      <a href="tel:+211920059945"
-         style="
-         color: #1877F2;
-         text-decoration: none;
-         font-weight: 600;">
-        +211 920 059 945
-      </a>
-    </p>
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
 
-  </div>
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
 
-  <p>
-    Music. Sound. Vision. Creativity.<br>
-    <strong>XTION JERRY</strong>
-  </p>
+            transition: .3s;
+        }
 
-</section>
-      </div>
-    </section>
+        .nav-links a:hover {
+            color: #ffbf00;
+        }
 
-    <section id="contact" class="section contact">
-      <p class="eyebrow">GET IN TOUCH</p>
-      <h2>Contact & Booking</h2>
-      <p class="section-text">For bookings, collaborations, production and business inquiries.</p>
-      <a class="btn primary" href="mailto: malongjerry@gmail.com">Email Me</a>
-    </section>
-  </main>
+        .nav-links .active {
+            color: #ffbf00;
+            border-bottom: 2px solid #ffbf00;
+            padding-bottom: 8px;
+        }
 
-  <footer>
-    <div class="logo">XTION <span>JERRY</span></div>
-    <p>© 2026 Xtion Jerry. All rights reserved.</p>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+        .book-btn {
+            background: #ffb900;
+            color: #000;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            font-weight: 800;
+            font-size: 13px;
+
+            transition: .3s;
+        }
+
+        .book-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255,185,0,.45);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 25px;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 420px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.10),
+                    rgba(0,0,0,.25),
+                    rgba(0,0,0,.78)
+                ),
+                url("hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border-bottom: 1px solid rgba(255,255,255,.15);
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 15% 50%,
+                    rgba(255,150,0,.40),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 65% 30%,
+                    rgba(0,130,255,.30),
+                    transparent 30%
+                );
+
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            min-height: 420px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            text-align: left;
+        }
+
+        .welcome {
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .hero-title {
+            font-family: "Bebas Neue", sans-serif;
+
+            font-size: clamp(65px, 9vw, 125px);
+
+            line-height: .82;
+
+            letter-spacing: 2px;
+        }
+
+        .hero-title span {
+            color: #ffb900;
+            font-family: "Permanent Marker", cursive;
+        }
+
+        .hero-role {
+            margin-top: 15px;
+
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .quote {
+            margin-top: 18px;
+
+            font-style: italic;
+
+            font-size: 16px;
+
+            max-width: 480px;
+        }
+
+        .hero-buttons {
+            margin-top: 22px;
+
+            display: flex;
+            gap: 12px;
+        }
+
+        .yellow-btn,
+        .outline-btn {
+            padding: 13px 22px;
+
+            border-radius: 30px;
+
+            font-weight: 800;
+            font-size: 13px;
+
+            border: none;
+
+            cursor: pointer;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            transition: .3s;
+        }
+
+        .yellow-btn {
+            background: #ffb900;
+            color: #000;
+        }
+
+        .outline-btn {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .yellow-btn:hover,
+        .outline-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* =====================================================
+           SECTION HEADINGS
+        ===================================================== */
+
+        .section {
+            padding: 28px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: "Bebas Neue", sans-serif;
+
+            font-size: 38px;
+            letter-spacing: 1px;
+        }
+
+        .section-title span {
+            color: #ffb900;
+            font-family: "Permanent Marker", cursive;
+        }
+
+        .view-all {
+            color: #ffbf00;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =====================================================
+           SONGS
+        ===================================================== */
+
+        .songs {
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+        .song-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(20,29,40,.96),
+                    rgba(4,7,11,.98)
+                );
+
+            border: 1px solid rgba(255,255,255,.17);
+
+            border-radius: 9px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.4);
+
+            transition: .35s;
+        }
+
+        .song-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #ffb900;
+
+            box-shadow:
+                0 15px 35px rgba(255,185,0,.18);
+        }
+
+        .song-cover {
+            aspect-ratio: 1/1;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .song-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            transition: .4s;
+        }
+
+        .song-card:hover .song-cover img {
+            transform: scale(1.07);
+        }
+
+        .song-info {
+            padding: 12px;
+        }
+
+        .song-name {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .genre {
+            color: #aaa;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .rating {
+            margin-top: 9px;
+
+            color: #ffc400;
+
+            font-size: 13px;
+        }
+
+        .rating span {
+            color: #aaa;
+            margin-left: 5px;
+        }
+
+        .song-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 7px;
+
+            margin-top: 11px;
+        }
+
+        .play-btn,
+        .download-btn {
+            border: none;
+
+            border-radius: 20px;
+
+            padding: 9px 7px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+        .play-btn {
+            background: #ffb900;
+            color: #000;
+        }
+
+        .download-btn {
+            background: #087ef5;
+            color: white;
+        }
+
+        /* =====================================================
+           BIOGRAPHY
+        ===================================================== */
+
+        .bio-area {
+            display: grid;
+
+            grid-template-columns:
+                1.3fr .9fr .8fr;
+
+            gap: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20,25,27,.92),
+                    rgba(5,8,12,.96)
+                );
+
+            border-top: 1px solid rgba(255,255,255,.12);
+            border-bottom: 1px solid rgba(255,255,255,.12);
+
+            padding: 25px;
+        }
+
+        .bio-text h2 {
+            font-family: "Permanent Marker", cursive;
+
+            font-size: 37px;
+
+            margin-bottom: 12px;
+        }
+
+        .bio-text h2 span {
+            color: #ffb900;
+        }
+
+        .bio-text p {
+            color: #ddd;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+
+            margin-bottom: 14px;
+        }
+
+        .bio-photo {
+            min-height: 330px;
+
+            background-image: url("artist.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            border-radius: 7px;
+
+            box-shadow: inset 0 0 80px rgba(0,0,0,.5);
+        }
+
+        /* =====================================================
+           QUICK FACTS
+        ===================================================== */
+
+        .facts h3,
+        .contact h3 {
+            color: #ffb900;
+
+            font-family: "Permanent Marker", cursive;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .fact {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.12);
+
+            font-size: 12px;
+        }
+
+        .fact span:first-child {
+            color: #aaa;
+        }
+
+        .contact {
+            margin-top: 22px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 12px;
+
+            margin: 12px 0;
+        }
+
+        .contact-item i {
+            color: #ffb900;
+
+            width: 18px;
+        }
+
+        .whatsapp {
+            background: #10c66b;
+
+            padding: 8px 13px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            display: inline-block;
+
+            margin-top: 3px;
+        }
+
+        /* =====================================================
+           SOCIAL
+        ===================================================== */
+
+        .socials {
+            display: flex;
+            gap: 9px;
+
+            margin-top: 15px;
+        }
+
+        .social {
+            width: 35px;
+            height: 35px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #111;
+
+            border: 1px solid rgba(255,255,255,.2);
+
+            transition: .3s;
+        }
+
+        .social:hover {
+            transform: translateY(-4px);
+            background: #ffb900;
+            color: #000;
+        }
+
+        /* =====================================================
+           LOWER GRID
+        ===================================================== */
+
+        .lower-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.1fr 1fr .8fr;
+
+            gap: 18px;
+        }
+
+        .panel {
+            background: rgba(5,9,14,.90);
+
+            border: 1px solid rgba(255,255,255,.13);
+
+            border-radius: 7px;
+
+            overflow: hidden;
+        }
+
+        .panel-title {
+            padding: 13px 15px;
+
+            color: #ffb900;
+
+            font-family: "Permanent Marker", cursive;
+
+            font-size: 18px;
+        }
+
+        .video {
+            position: relative;
+        }
+
+        .video img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .video-play {
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%,-50%);
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: rgba(0,0,0,.7);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 21px;
+        }
+
+        .video-info {
+            padding: 12px;
+
+            font-size: 12px;
+        }
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 7px;
+
+            padding: 0 12px 12px;
+        }
+
+        .gallery img {
+            aspect-ratio: 1/1;
+
+            width: 100%;
+
+            object-fit: cover;
+
+            border-radius: 5px;
+        }
+
+        .news {
+            padding: 0 15px 15px;
+        }
+
+        .news-box {
+            border: 1px solid rgba(255,255,255,.15);
+
+            padding: 15px;
+
+            border-radius: 7px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,185,0,.08),
+                    rgba(0,0,0,.3)
+                );
+        }
+
+        .news-box h4 {
+            margin-bottom: 9px;
+        }
+
+        .news-box p {
+            color: #bbb;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* =====================================================
+           FAN CLUB
+        ===================================================== */
+
+        .fan-club {
+            margin-top: 18px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #111,
+                    #080b0e
+                );
+
+            border-top: 1px solid rgba(255,185,0,.35);
+            border-bottom: 1px solid rgba(255,185,0,.35);
+
+            padding: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .mail-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            background: #ffb900;
+
+            color: #000;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 22px;
+        }
+
+        .fan-text {
+            min-width: 190px;
+        }
+
+        .fan-text h3 {
+            color: #ffb900;
+
+            font-family: "Permanent Marker", cursive;
+        }
+
+        .fan-text p {
+            color: #aaa;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+
+        .subscribe {
+            display: flex;
+
+            flex: 1;
+
+            max-width: 500px;
+
+            margin-left: auto;
+        }
+
+        .subscribe input {
+            flex: 1;
+
+            padding: 12px 15px;
+
+            border: 1px solid #333;
+
+            background: #080808;
+
+            color: white;
+
+            border-radius: 25px 0 0 25px;
+
+            outline: none;
+        }
+
+        .subscribe button {
+            border: none;
+
+            background: #ffb900;
+
+            color: #000;
+
+            padding: 0 25px;
+
+            border-radius: 0 25px 25px 0;
+
+            font-weight: 800;
+
+            cursor: pointer;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 25px 0;
+
+            background: #030506;
+
+            border-top: 1px solid rgba(255,255,255,.12);
+        }
+
+        .footer-inner {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-family: "Bebas Neue", sans-serif;
+
+            font-size: 30px;
+        }
+
+        .footer-logo span {
+            color: #ffb900;
+            font-family: "Permanent Marker", cursive;
+        }
+
+        .footer-links {
+            display: flex;
+
+            gap: 15px;
+
+            color: #aaa;
+
+            font-size: 11px;
+        }
+
+        .copyright {
+            color: #777;
+
+            font-size: 11px;
+        }
+
+        /* =====================================================
+           MUSIC PLAYER
+        ===================================================== */
+
+        .music-player {
+            position: fixed;
+
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(5,7,10,.97);
+
+            border-top: 1px solid #ffb900;
+
+            padding: 10px 18px;
+
+            display: none;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .music-player.active {
+            display: flex;
+        }
+
+        .player-info {
+            flex: 1;
+        }
+
+        .player-info strong {
+            display: block;
+            font-size: 13px;
+        }
+
+        .player-info span {
+            color: #888;
+            font-size: 10px;
+        }
+
+        audio {
+            width: 350px;
+            height: 35px;
+        }
+
+        .close-player {
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width:1100px) {
+
+            .songs {
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
+            .bio-area {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .facts {
+                grid-column: span 2;
+            }
+
+            .lower-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+        @media(max-width:750px) {
+
+            .nav-links,
+            header .book-btn {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content {
+                align-items: center;
+             
