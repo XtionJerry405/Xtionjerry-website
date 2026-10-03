@@ -114,25 +114,23 @@ header {
 
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 20% 50%,
-            #ff7200 0%,
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 65% 30%,
-            #005cff 0%,
-            transparent 40%
-        ),
+    background-image:
         linear-gradient(
-            120deg,
-            #111,
-            #050608 60%,
-            #111
-        );
+            90deg,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.55)
+        ),
+        url("hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 
     display: flex;
+
     align-items: center;
 }
 
